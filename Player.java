@@ -16,16 +16,18 @@ public class Player
   public Player()
   {
     score = 0;
-    System.out.println("What is your name?");
+    System.out.println("Enter player name: ");
     name = sc.nextLine();
+    System.out.println("Hello and welcome to the game " + name + "!");
   }
 
   public Player(String name)
   {
     score = 0;
     this.name = name;
+    System.out.println("Hello and welcome to the game " + this.name + "!");
   }
-  
+
   /* your code here - accessor(s) */
   public int getScore()
   {
