@@ -12,9 +12,13 @@ public class  Board
   private String phrase;
   private int currentLetterValue; 
 
-  /* your code here - constructor(s) */ 
+  /* your code here - constructor(s) */
   
   /* your code here - accessor(s) */
+  
+  public int getLetterVal(){
+    return currentLetterValue;
+  }
   
   /* your code here - mutator(s)  */
 
