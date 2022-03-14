@@ -12,7 +12,7 @@ public class  Board
   private String phrase;
   private int currentLetterValue; 
 
-  /* your code here - constructor(s) */ 
+  /* your code here - constructor(s) */
   public Board()
   {
     phrase = loadPhrase();
@@ -28,6 +28,10 @@ public class  Board
   public String readPhrase()
   public Boolean solvedPhrase(String phrase)
   */
+  
+  public int getLetterVal(){
+    return currentLetterValue;
+  }
   
   /* your code here - mutator(s)  */
 
