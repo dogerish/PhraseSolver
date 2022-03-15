@@ -15,6 +15,7 @@ public class  Board
   /* your code here - constructor(s) */
   public Board()
   {
+    solvedPhrase = "";
     phrase = loadPhrase();
     setLetterValue();
   }
