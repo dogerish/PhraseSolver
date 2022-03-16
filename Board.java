@@ -21,21 +21,16 @@ public class  Board
   }
   
   /* your code here - accessor(s) */
-  /*
-  public String getSolvedPhrase()
-  public int getLetterVal()
-  public void setLetterVal(int val)
-  public void getGuess(String letter)
-  public String readPhrase()
-  public Boolean solvedPhrase(String phrase)
-  */
-  
-  public int getLetterVal(){
-    return currentLetterValue;
-  }
+  public String getSolvedPhrase() { /* incomplete */ }
+
+  public int getLetterValue() { /* incomplete */ }
+
+  public void getGuess(String letter) { /* incomplete */ }
+
+  public Boolean solvedPhrase(String phrase) { /* incomplete */ }
   
   /* your code here - mutator(s)  */
-
+  public void setLetterVal(int val) { /* incomplete */ }
 
   /* ---------- provided code, do not modify ---------- */
   public void setLetterValue()
