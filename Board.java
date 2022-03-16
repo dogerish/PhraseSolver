@@ -95,6 +95,13 @@ public class  Board
     return tempPhrase;
   }  
 
+  /* Checks for a given letter guess in the phrase, returns whether or not the letter was in the phrase
+    Precondition:
+      phrase exists and is populated
+      solvedPhrase exists and is popult\ated
+    Postcondition:
+      solvedPhrase is updated with any instances of the guessed letter revealed
+  */
   public boolean guessLetter(String guess)
   {
     boolean foundLetter = false;
