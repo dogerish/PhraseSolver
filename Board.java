@@ -107,19 +107,27 @@ public class  Board
     boolean foundLetter = false;
     String newSolvedPhrase = "";
     
+    // iterate through the phrase
     for (int i = 0; i < phrase.length(); i++)
     {
+      // if the guess is this character in the phrase
       if (phrase.substring(i, i + 1).equals(guess))
       {
+        // add the guess and a space to the new solved phrase
         newSolvedPhrase += guess + " ";
+        // letter has been found
         foundLetter = true;
       }
       else
       {
+        // add the character from the solved phrase,
+        // multiplying i by 2 to compensate for a space being after every character slot
         newSolvedPhrase += solvedPhrase.substring(i * 2, i * 2 + 1) + " ";  
       }
     }
+    // update the solved phrase
     solvedPhrase = newSolvedPhrase;
+    // return whether or not the letter was found
     return foundLetter;
   } 
 } 
