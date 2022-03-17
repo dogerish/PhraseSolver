@@ -4,7 +4,7 @@
  *  The PhraseSolver class the PhraseSolverGame
  */
 import java.util.Scanner;
-  
+
 public class PhraseSolver
 {
   /* your code here - attributes */
@@ -26,21 +26,21 @@ public class PhraseSolver
   public void play()
   {
     boolean solved = false;
-    int currentPlayer = 1;
+    Player current = player1;
 
     Scanner input = new Scanner(System.in);
-    System.out.print("Name of player 1? ");
-    player1.setName(input.nextLine());
-    System.out.print("Name of player 2? ");
-    player2.setName(input.nextLine());
     
     boolean correct = true;
     while (!solved) 
     {
-      
       /* your code here - game logic */
-      
-      
+      // display current player name
+      System.out.println(current.getName() + " is guessing.");
+      // show partially solved phrase
+      System.out.println(game.getSolvedPhrase());
+      // show point value of next guess
+      game.setLetterValue();
+      System.out.println("Point value is " + game.getLetterValue());
       /* your code here - determine how game ends */
       solved = true; 
     } 

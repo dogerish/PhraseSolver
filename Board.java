@@ -26,8 +26,6 @@ public class  Board
   public int getLetterValue() { return currentLetterValue; }
 
   /* your code here - mutator(s)  */
-  public void setLetterVal(int val) { /* incomplete */ }
-
   /* ---------- provided code, do not modify ---------- */
   public void setLetterValue()
   {
