@@ -29,6 +29,10 @@ public class PhraseSolver
     int currentPlayer = 1;
 
     Scanner input = new Scanner(System.in);
+    System.out.print("Name of player 1? ");
+    player1.setName(input.nextLine());
+    System.out.print("Name of player 2? ");
+    player2.setName(input.nextLine());
     
     boolean correct = true;
     while (!solved) 
