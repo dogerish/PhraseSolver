@@ -30,21 +30,41 @@ public class PhraseSolver
 
     Scanner input = new Scanner(System.in);
     
-    boolean correct = true;
-    while (!solved) 
+    String guesses = "";
+    while (!solved)
     {
-      /* your code here - game logic */
-      // display current player name
-      System.out.println(current.getName() + " is guessing.");
+
       // show partially solved phrase
       System.out.println(game.getSolvedPhrase());
       // show point value of next guess
       game.setLetterValue();
       System.out.println("Point value is " + game.getLetterValue());
-      /* your code here - determine how game ends */
-      solved = true; 
-    } 
-   
+      // display current player name
+      System.out.println(current.getName() + " is guessing:");
+      
+      String guess = input.nextLine();
+      while (guess.length() == 0 || guesses.contains(guess))
+      {
+        System.out.println("Invalid guess. Try again");
+        guess = input.nextLine();
+      }
+      guesses += guess;
+      boolean correct = false;
+      if (guess.length() > 1) 
+      {
+        if (game.isSolved(guess))
+          correct = solved = true;
+      }
+      else if (game.guessLetter(guess))
+      {
+        correct = true;
+        if (!game.getSolvedPhrase().contains("_")) solved = true;
+      }
+      if (correct) current.setScore(game.getLetterValue());
+      else current = (current == player1) ? player2 : player1;
+    }
+    current = (player1.getScore() > player2.getScore()) ? player1 : player2;
+    System.out.println(current.getName() + " won with " + current.getScore() + "!");
   }
-  
+
 }
