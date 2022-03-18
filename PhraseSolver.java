@@ -43,23 +43,28 @@ public class PhraseSolver
       System.out.println(current.getName() + " is guessing:");
       
       String guess = input.nextLine();
+      //Gets a valid guess
       while (guess.length() == 0 || guesses.contains(guess))
       {
         System.out.println("Invalid guess. Try again");
         guess = input.nextLine();
       }
+      //keeps track of past guesses
       guesses += guess;
       boolean correct = false;
+      //checks a guessed phrase
       if (guess.length() > 1) 
       {
         if (game.isSolved(guess))
           correct = solved = true;
       }
+      //checks a guessed letter
       else if (game.guessLetter(guess))
       {
         correct = true;
         if (!game.getSolvedPhrase().contains("_")) solved = true;
       }
+      //updates score or swaps players
       if (correct) current.setScore(game.getLetterValue());
       else current = (current == player1) ? player2 : player1;
     }
